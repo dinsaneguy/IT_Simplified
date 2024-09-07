@@ -129,7 +129,7 @@ if selected == 'Heart Disease Prediction':
 
             # Make prediction
             heart_Predict = heart_model.predict(
-                [[Age_H, Sex_H, Cp_H, Trestbps_H, Chol_H, Fbs_H, Restecg_H, Thalach_H, Exang_H, Oldpeak_H, Oldpeak_H, Ca_H, Thal_H]]
+                [[Age_H, Sex_H, Cp_H, Trestbps_H, Chol_H, Fbs_H, Restecg_H, Thalach_H, Exang_H, Oldpeak_H, Slope_H, Ca_H, Thal_H]]
             )
 
             # Display result based on prediction
