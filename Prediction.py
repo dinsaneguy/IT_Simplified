@@ -1,7 +1,8 @@
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu as opt
-
+from feedback import feedback
+from Diabetes import diabetes
 
 
 diabetes_model = pickle.load(
@@ -32,41 +33,28 @@ with open('style.css') as f:
                 "Parkinson Prediction",
                 'Heart Disease Prediction',
                 "CAD[Coronary Artery Disease] Prediction",
+                "Feedback"
             ],
             icons=['','','heart','',""]
         )
 
 
-
-
+if(selected=="Test All"):
+    select_inp = st.selectbox(
+        "Select input Method",[
+            "Open Camera",
+            "Upload Photo",
+            "Manual Input"
+        ]
+    )
+    if(select_inp=="Open Camera"):
+        camera_inp = st.camera_input("Click Photo of Report")
+        if(camera_inp is not None):
+            st.image(camera_inp, caption="Captured Image", use_column_width=True)
 
 
 if(selected=="Diabetes Prediction"):
-    st.title("Diabetes Prediction")
-    Pregnancies_D=0
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        Gender_input_d = st.selectbox("Gender",["Male","Female","Other"])
-        Gender_d = 1 if Gender_input_d == "Male" else 0
-        if(Gender_d == 0):
-            Pregnancies_d = st.number_input("Number of Pregnancies",0,20,0)
-        Age_d = st.number_input("Age",0,120,14,step=1)
-    with col2:
-        Glucose_d = st.number_input("Glucose Level (mg/dl)",0,600,100)
-        Skin_Thickness_d = st.number_input("Skin Thickness in mm")
-        Insulin_d = st.number_input("Insulin Level(microunits/ml)")
-    with col3:
-        BP_d = st.number_input("Diastolic Blood Pressure (mm hg)",40,400,180,step=1)
-        BMI_d = st.number_input("BMI",0.01,100.00,20.00,step=1.0)
-        DPF_d = st.number_input("DPF",0.000,3.000,1.000,step=0.005)#Diabetes Predigree Function
-    if(st.button("Predict Diabetes")):
-        diab_Predict = diabetes_model.predict([[Gender_d,Pregnancies_D,Age_d,Glucose_d,Skin_Thickness_d,Insulin_d,BP_d,DPF_d]])
-        if (diab_Predict[0] == 1):
-            diagnosis = "The person is Diabetic"
-        else:
-            diagnosis = "The person is not Diabetic"
-    st.success(diagnosis)
+    diabetes()
 
 
 
@@ -214,16 +202,10 @@ if selected == 'Parkinson Prediction':
             st.error(f"Input error: {e}")
 
 
-
-# MDVP:Fo(Hz),MDVP:Fhi(Hz),MDVP:Flo(Hz),MDVP:Jitter(%),MDVP:Jitter(Abs),MDVP:RAP,
-# MDVP:PPQ,Jitter:DDP,MDVP:Shimmer,MDVP:Shimmer(dB),Shimmer:APQ3,Shimmer:APQ5,MDVP:APQ,Shimmer:DDA,
-# NHR,HNR,RPDE,DFA,spread1,spread2,D2,PPE
-
-
 #FOR CAD
-if (selected == 'CAD(Coronary Artery Disease) Prediction'):
+if (selected == 'CAD[Coronary Artery Disease] Prediction'):
     # page title
-    st.title("CAD(Coronary Artery Disease) Prediction System")
+    st.title("CAD[Coronary Artery Disease] Prediction")
     col1, col2 = st.columns(2)
 
     with col1:  # Even-numbered titles
@@ -486,3 +468,7 @@ if (selected == 'CAD(Coronary Artery Disease) Prediction'):
         
         except ValueError as e:
             st.error(f"Input error: {e}")
+
+if(selected=="Feedback"):
+    st.header("Feedback")
+    feedback()
