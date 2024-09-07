@@ -40,7 +40,10 @@ if(selected=="Diabetes Prediction"):
 
     with col1:
         Gender_input_d = st.selectbox("Gender",["Male","Female","Other"])
-        Gender = 1 if Gender_input_d == "Male" else 0
-        if(Gender == 0):
-            Pregnancies_D = st.number_input("Number of Pregnancies",0,20,0,label_visibility="visible")
-        #newcomment
+        Gender_d = 1 if Gender_input_d == "Male" else 0
+        if(Gender_d == 0):
+            Pregnancies_d = st.number_input("Number of Pregnancies",0,20,0)
+        Glucose_d = st.number_input("Glucose Level (mg/dl)",0,600,100)
+    with col2:
+        BP_d = st.number_input("Diastolic Blood Pressure (mm hg)",40,400,180,step=1)
+        
