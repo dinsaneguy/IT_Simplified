@@ -2,8 +2,32 @@
     background-color: aliceblue;
 }
 
+.stImage{
+    display: flex;
+    /* float: left; */
 
+    
+}
+.st-emotion-cache-1i2wz1k{
+ /* border:5px solid red;    */
+}
+.st-emotion-cache-6qob1r{
+    max-width: 15vw;
+}
+.stSidebar{
+    border: 2px solid white;
+    max-width:17vw;
+}
+#app{
+    color:blue;
+    background-color: yellow;
+}
 .st-emotion-cache-1kyxreq{
     border:2px solid red !important;
     background-color: aliceblue;
+    display: flex;
     }
+
+.st-emotion-cache-h4xjwg{
+    border: 2px solid green;
+}
