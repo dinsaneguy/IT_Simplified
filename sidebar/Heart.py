@@ -91,9 +91,9 @@ def heart():
 
                 # Display result based on prediction
                 if heart_Predict[0] == 0:
-                    result = "The person doesn't have a Heart Disease"
+                    result = "Our system estimates Heart Disease risk but can't guarantee results"
                 else:
-                    result = "The person has a Heart Disease"
+                    result = "Our system predicts you do not have Heart Disease, but this is not a guarantee"
             
             except ValueError:
                 st.error("Please enter valid numeric values for all fields.")

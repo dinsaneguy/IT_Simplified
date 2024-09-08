@@ -46,7 +46,6 @@ with open('style.css') as f: #style add garne from style.css
         selected_sidebar = opt(
             'Med_Guardian',
             [   "Home",
-                
                 "Diabetes Prediction",
                 "Parkinson Prediction",
                 'Heart Disease Prediction',

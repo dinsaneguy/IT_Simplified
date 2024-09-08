@@ -66,9 +66,9 @@ def park():
                 ]])
                 
                 if parkinson_predict[0] == 1:
-                    diagnosis_P = "The person is at risk of Parkinson Disease"
+                    diagnosis_P = "Our system estimates Parkison risk but can't guarantee results"
                 else:
-                    diagnosis_P = "The person is not at risk of Parkinson Disease"
+                    diagnosis_P = "Our system predicts you do not have Parkinson, but this is not a guarantee"
 
                 st.success(diagnosis_P)
 

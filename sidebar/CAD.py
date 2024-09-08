@@ -280,9 +280,9 @@ def cad():
 
                 # Display the prediction result
                 if cad_predict[0] == 1:
-                    diagnosis_C = "The person is at risk of CAD"
+                    diagnosis_C = "Our system estimates CAD risk but can't guarantee results"
                 else:
-                    diagnosis_C = "The person is not at risk of CAD"
+                    diagnosis_C = "Our system predicts you do not have CAD, but this is not a guarantee"
 
                 st.success(diagnosis_C)
             

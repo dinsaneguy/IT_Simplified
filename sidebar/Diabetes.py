@@ -42,7 +42,7 @@ def diabetes():
 
             diab_Predict = diabetes_model.predict([[Pregnancies_d,Glucose_d,BP_d,Skin_Thickness_d,Insulin_d,BMI_d,DPF_d,Age_d]])
             if (diab_Predict[0] == 1):
-                diagnosis = "The person is Diabetic"
+                diagnosis = "Our system estimates Diabetes risk but can't guarantee results"
             else:
-                diagnosis = "The person is not Diabetic"
+                diagnosis = "Our system predicts you do not have Diabetes, but this is not a guarantee"
         st.success(diagnosis)

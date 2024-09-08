@@ -12,15 +12,12 @@ def feedback():
         max_chars=400
     )
 
-    st.toggle("Experience",value="Good",on_change="Bad")
-
-    labels = ["Worked", "Didn't Work"]
-    values = {label: i for i, label in enumerate(labels)}
-
-# Create a slider with numerical values
-    selected_value = st.slider("How are you?", min_value=0, max_value=len(labels)-1, step=1)
-    st.write(labels[selected_value])
-    # submitbtn
+    tog=st.toggle("Did our prediction worked?",value=1)
+    if(tog):
+        st.write("Yes")
+    else:
+        st.write("No!")
+        
     if st.button("Submit Feedback"):
         #session update
         st.session_state.feedback_text = feedback_text
