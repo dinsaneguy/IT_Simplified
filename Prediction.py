@@ -8,7 +8,7 @@ from sidebar.CAD import cad
 from Nav.home import home_page
 from Nav.Nav import nav
 from streamlit_navigation_bar import st_navbar
-from Ocr_reader import *
+
 
 
 
@@ -46,34 +46,17 @@ with open('style.css') as f: #style add garne from style.css
         selected_sidebar = opt(
             'Med_Guardian',
             [   "Home",
-                "Test All",
+                
                 "Diabetes Prediction",
                 "Parkinson Prediction",
                 'Heart Disease Prediction',
                 "CAD[Coronary Artery Disease] Prediction",
             ],
-            icons=['home', 'test-tube', 'blood-drop', 'brain', 'heart', 'artery']
+            icons=['house', 'droplet', 'brilliance', 'heart', 'heart', 'artery']
         )
 if(selected_sidebar=="Home"):
     nav()
 #checking camera input to test all diseases 
-if(selected_sidebar=="Test All"):
-    select_inp = st.selectbox(
-        "Select input Method",[
-            # 'Choose Option',
-            "Upload Photo",
-            "Mannual Input",
-            "Open Camera"
-        ]
-    )
-    if(select_inp=="Open Camera"):
-        camera_inp = st.camera_input("Click Photo of Report")
-        if(camera_inp is not None):
-            st.image(camera_inp, caption="Captured Image", use_column_width=True)
-    elif (select_inp=='Upload Photo'):
-        MainMethod()
-    elif (select_inp=='Mannual Input'):
-        st.write("Navigate through Sidebar")
 
 
 #diabetes prediction
