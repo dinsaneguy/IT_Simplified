@@ -6,8 +6,13 @@ import streamlit.components.v1 as components
 
 def MapsShower():
     st.title("Leaflet Map with Custom Tile Layer")
-    
+
+     
+    # Initialize the map
     m = folium.Map(location=[27,85], zoom_start=7)
+
+   
+    # Add a custom tile layer with attribution
     folium.TileLayer(
         tiles='https://{s}.tile.stamen.com/terrain/{z}/{x}/{y}.png',
         attr='Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
