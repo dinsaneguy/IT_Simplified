@@ -52,7 +52,7 @@ with open('style.css') as f: #style add garne from style.css
                 'Heart Disease Prediction',
                 "CAD[Coronary Artery Disease] Prediction",
             ],
-            icons=['','','heart','',""]
+            icons=['home', 'test-tube', 'blood-drop', 'brain', 'heart', 'artery']
         )
 if(selected_sidebar=="Home"):
     nav()
