@@ -6,6 +6,7 @@ import pickle
 cad_model = pickle.load(
     open('C:\Med_Guardian\Cad.sav', 'rb'))
 def cad():
+    diagnosis_C=""
     
     # page title
     st.title("CAD[Coronary Artery Disease] Prediction")

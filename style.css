@@ -1,21 +1,28 @@
-[data-testid='stheader']{
-    background-color: aliceblue;
+.st-emotion-cache-12fmjuu{
+    /* yo chai mathi ko deploy wala ho  */
+    visibility: hidden;
 }
 
 .stImage{
+     /* med_guard logo */
+    height: 170px;
+    width: 160px;
     display: flex;
-    /* float: left; */
+}
 
-    
-}
-.st-emotion-cache-1i2wz1k{
- /* border:5px solid red;    */
-}
-.st-emotion-cache-6qob1r{
-    max-width: 15vw;
+.st-emotion-cache-1v0mbdj{
+    /* image holder */
+    height: 250px;
+    border-radius: 50%;
+} */
+
+.st-emotion-cache-6qob1r{ 
+    /*you chai sidebar bhitra ko tyo diseases ko selction ko ho*/
+    max-width: 18vw;
 }
 .stSidebar{
-    border: 2px solid white;
+    /* tyo bahira ko */
+    /* border: 2px solid white; */
     max-width:17vw;
 }
 #app{
@@ -23,11 +30,7 @@
     background-color: yellow;
 }
 .st-emotion-cache-1kyxreq{
-    border:2px solid red !important;
-    background-color: aliceblue;
+    border:2px solid rgb(18, 18, 18) !important;
+    /* background-color: rgb(156, 190, 146); */
     display: flex;
     }
-
-.st-emotion-cache-h4xjwg{
-    border: 2px solid green;
-}
