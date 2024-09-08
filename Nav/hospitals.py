@@ -5,7 +5,7 @@ from streamlit_folium import st_folium
 import streamlit.components.v1 as components
 def hospital():
     def MapsShower():
-        st.title("Leaflet Map with Custom Tile Layer")
+        
 
         m = folium.Map(location=[27,85], zoom_start=7)
         folium.TileLayer(
